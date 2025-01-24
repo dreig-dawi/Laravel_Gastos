@@ -20,3 +20,5 @@ This installation is meant to happen after cloning this repository using PhpStor
   - composer require laravel/breeze --dev
   - php artisan breeze:install blade
 - npm run dev
+- It should totally be working but any problem:
+  - php artisan make:model -mrc Gasto
