@@ -16,3 +16,7 @@ This installation is meant to happen after cloning this repository using PhpStor
 - php artisan serve
 - any problems? php artisan migrate
 - php artisan serve
+- Should be working already but any problem:
+  - composer require laravel/breeze --dev
+  - php artisan breeze:install blade
+- npm run dev
