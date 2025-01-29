@@ -3,7 +3,7 @@
 
 TODO: Write a project description
 # Installation
-This installation is meant to happen after cloning this repository using PhpStorm IDE:
+This installation is meant to happen after cloning this repository using PhpStorm IDE, but as long as the terminal being used is Ubuntu, it should work properly:
 - sudo apt install composer
 - cd Expenses
 - php artisan serve
