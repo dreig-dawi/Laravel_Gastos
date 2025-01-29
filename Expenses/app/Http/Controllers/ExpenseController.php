@@ -15,7 +15,12 @@ class ExpenseController extends Controller
      */
     public function index(): View
     {
-        return view('expenses.index');
+        return view(
+            'expenses.index',
+            [
+                'expenses' => Expense::with('user')->latest()->get(),
+            ]
+        );
     }
 
     /**
@@ -35,9 +40,9 @@ class ExpenseController extends Controller
             'message' => 'required|string|max:255',
         ]);
 
-        $request->user()->chirps()->create($validated);
+        $request->user()->expenses()->create($validated);
 
-        return redirect(route('chirps.index'));
+        return redirect(route('expenses.index'));
     }
 
     /**
