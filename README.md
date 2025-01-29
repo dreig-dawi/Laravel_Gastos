@@ -8,6 +8,7 @@ This installation is meant to happen after cloning this repository using PhpStor
 - cd Expenses
 - php artisan serve
 - any problems? composer install
+---
 - any problems? sudo apt-get install php-xml
 - php artisan serve
 - any problems? php artisan key:generate
