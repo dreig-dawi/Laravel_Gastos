@@ -5,7 +5,7 @@ TODO: Write a project description
 # Installation
 This installation is meant to happen after cloning this repository using PhpStorm IDE:
 - sudo apt install composer
-- cd gastos
+- cd Expenses
 - php artisan serve
 - any problems? composer install
 - any problems? sudo apt-get install php-xml
