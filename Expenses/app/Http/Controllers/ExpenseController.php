@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Expense;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
@@ -28,9 +29,15 @@ class ExpenseController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        $validates = $request->validate([
+            'message' => 'required|string|max:255',
+        ]);
+
+        $request->user()->expenses()->create($validates);
+
+        return redirect(route('expenses.index'));
     }
 
     /**
