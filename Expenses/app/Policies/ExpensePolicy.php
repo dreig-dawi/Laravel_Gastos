@@ -4,7 +4,6 @@ namespace App\Policies;
 
 use App\Models\Expense;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
 
 class ExpensePolicy
 {
@@ -45,7 +44,7 @@ class ExpensePolicy
      */
     public function delete(User $user, Expense $expense): bool
     {
-        return false;
+        return $this->update($user, $expense);
     }
 
     /**

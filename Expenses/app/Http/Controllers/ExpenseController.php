@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Expense;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\View\View;
 
@@ -82,8 +81,12 @@ class ExpenseController extends Controller {
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( Expense $expense ) {
-        //
+    public function destroy( Expense $expense ): RedirectResponse {
+        Gate::authorize( 'delete', $expense );
+
+        $expense->delete();
+
+        return redirect( route( 'expenses.index' ) );
     }
 
 }
