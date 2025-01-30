@@ -6,14 +6,13 @@ TODO: Write a project description
 This installation is meant to happen after cloning this repository using PhpStorm IDE, but as long as the terminal being used is Ubuntu, it should work properly:
 - sudo apt install composer
 - cd Expenses
-- php artisan serve
-- any problems? composer install
+- composer install
 - You will have to modify the .env file to match your database configuration:
   - You can create a copy of the file [.env.example](./Expenses/.env.example) at [Expenses](./Expenses) and rename it to ".env".
+- php artisan key:generate
 ---
 - any problems? sudo apt-get install php-xml
 - php artisan serve
-- any problems? php artisan key:generate
 - php artisan serve
 - any problems? sudo apt-get install php-sqlite3
 - php artisan serve
