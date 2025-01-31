@@ -10,6 +10,7 @@ This installation is meant to happen after cloning this repository using PhpStor
 - You will have to modify the .env file to match your database configuration:
   - You can create a copy of the file [.env.example](./Expenses/.env.example) at [Expenses](./Expenses) and rename it to ".env".
 - php artisan key:generate
+- php artisan migrate para crear la base de datos
 ---
 - any problems? sudo apt-get install php-xml
 - php artisan serve
